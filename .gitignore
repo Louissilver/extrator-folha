@@ -1,0 +1,24 @@
+# Ambiente virtual
+venv/
+.venv/
+
+# Arquivo de variáveis secretas
+.env
+
+# Arquivos e pastas geradas em tempo de execução
+__pycache__/
+*.pyc
+*.pyo
+
+# Arquivos temporários do Streamlit
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# Arquivos de usuário
+.DS_Store
+Thumbs.db
+
+# Histórico e planilhas geradas
+imagens/
+planilhas/
+metadados.json
