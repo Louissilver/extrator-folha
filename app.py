@@ -103,7 +103,16 @@ if aba == "📤 Enviar nova imagem":
                             "content": [
                                 {
                                     "type": "text",
-                                    "text": "Extraia os dados desta imagem como tabela e retorne em formato JSON.",
+                                    "text": (
+                                        "Você está vendo um formulário impresso com três colunas: Hora, Matéria Prima e Quantidade. "
+                                        "Extraia **todas as linhas preenchidas** dessa tabela, mantendo os valores conforme aparecem, mesmo que pareçam abreviações. "
+                                        "Retorne a resposta apenas em formato JSON com a estrutura:\n\n"
+                                        "[\n"
+                                        '  {"hora": "07:11", "materia_prima": "CMK", "quantidade": "50"},\n'
+                                        "  ...\n"
+                                        "]\n\n"
+                                        "Inclua inclusive horários repetidos ou linhas em branco parcial, se tiverem valor relevante."
+                                    ),
                                 },
                                 {
                                     "type": "image_url",
