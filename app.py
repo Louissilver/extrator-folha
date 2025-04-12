@@ -104,14 +104,17 @@ if aba == "📤 Enviar nova imagem":
                                 {
                                     "type": "text",
                                     "text": (
-                                        "Você está vendo um formulário impresso com três colunas: Hora, Matéria Prima e Quantidade. "
-                                        "Extraia **todas as linhas preenchidas** dessa tabela, mantendo os valores conforme aparecem, mesmo que pareçam abreviações. "
-                                        "Retorne a resposta apenas em formato JSON com a estrutura:\n\n"
+                                        "Você está vendo um formulário manuscrito com 3 colunas fixas: Hora, Matéria Prima e Quantidade. "
+                                        "Leia com muita atenção e extraia **literalmente** os dados como aparecem na imagem, mesmo que pareçam incorretos ou abreviados. "
+                                        "Não corrija erros, não sugira nomes parecidos. Apenas extraia o que está exatamente visível. "
+                                        "A estrutura da resposta deve ser JSON, como no exemplo:\n\n"
                                         "[\n"
                                         '  {"hora": "07:11", "materia_prima": "CMK", "quantidade": "50"},\n'
+                                        '  {"hora": "07:23", "materia_prima": "Água", "quantidade": "1050"},\n'
                                         "  ...\n"
                                         "]\n\n"
-                                        "Inclua inclusive horários repetidos ou linhas em branco parcial, se tiverem valor relevante."
+                                        "Inclua **todas** as linhas preenchidas, mesmo que apenas parcialmente. "
+                                        "Se algum campo estiver ilegível, use o texto 'ilegível' nesse campo."
                                     ),
                                 },
                                 {
